@@ -28,12 +28,12 @@ const Experience = () => {
         <Grass position={[0, -1, 0]} />
       </Suspense>
       <Suspense
-        fallback={<Placeholder scale={[2, 1, 2]} position={[0, -0.5, 0]} />}
+        fallback={<Placeholder scale={[2, 6, 2]} position={[0, 2, 0]} />}
       >
         <Human position={[0, -1, 0]} />
       </Suspense>
       <Suspense
-        fallback={<Placeholder scale={[1, 3, 5]} position={[-5, 0.5, 0]} />}
+        fallback={<Placeholder scale={[1, 2, 5]} position={[-5, 0.5, 0]} />}
       >
         <Fox position={[-5, -1, 0]} />
       </Suspense>

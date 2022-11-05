@@ -6,7 +6,12 @@ import Experience from "./Experience";
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
 root.render(
-  <Canvas shadows>
+  <Canvas
+    shadows
+    camera={{
+      position: [-10, 10, 10],
+    }}
+  >
     <Experience />
   </Canvas>
 );

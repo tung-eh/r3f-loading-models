@@ -3,7 +3,8 @@ import { OrbitControls } from "@react-three/drei";
 import { Perf } from "r3f-perf";
 import Placeholder from "./Placeholder";
 
-const Hamburger = lazy(() => import("./Hamburger"));
+const Grass = lazy(() => import("./Grass"));
+const Human = lazy(() => import("./Human"));
 const Fox = lazy(() => import("./Fox"));
 
 const Experience = () => {
@@ -23,10 +24,13 @@ const Experience = () => {
         <planeGeometry />
         <meshStandardMaterial color="greenyellow" />
       </mesh>
+      <Suspense fallback={null}>
+        <Grass position={[0, -1, 0]} />
+      </Suspense>
       <Suspense
         fallback={<Placeholder scale={[2, 1, 2]} position={[0, -0.5, 0]} />}
       >
-        <Hamburger position={[0, -1, 0]} />
+        <Human position={[0, -1, 0]} />
       </Suspense>
       <Suspense
         fallback={<Placeholder scale={[1, 3, 5]} position={[-5, 0.5, 0]} />}
